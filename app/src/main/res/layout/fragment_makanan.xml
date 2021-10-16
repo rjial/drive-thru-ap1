@@ -10,9 +10,11 @@
 <!--        android:id="@+id/recyclerViewMakanan"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="match_parent"/>-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="adasdasdasd"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_Makanan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            />
 
 </FrameLayout>

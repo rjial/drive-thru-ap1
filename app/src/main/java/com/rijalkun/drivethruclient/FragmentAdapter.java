@@ -20,9 +20,10 @@ public class FragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch(position) {
             case 0:
+//                ConnectMysql connectMysql = new ConnectMysql();
                 return new FragmentMakanan();
             case 1:
-                return new FragmentMakanan();
+                return new MinumanFragment();
         }
         return new FragmentMakanan();
     }
