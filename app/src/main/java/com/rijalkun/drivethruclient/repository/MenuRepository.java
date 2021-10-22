@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.rijalkun.drivethruclient.ConnectMysql;
 import com.rijalkun.drivethruclient.model.MakananModel;
+import com.rijalkun.drivethruclient.model.MenuModel;
 import com.rijalkun.drivethruclient.model.MinumanModel;
 
 import java.sql.Connection;
@@ -26,9 +27,9 @@ public class MenuRepository {
         }
     }
 
-    public MutableLiveData<List<MakananModel>> getMakananList() {
-        List<MakananModel> list = new ArrayList<>();
-        MutableLiveData<List<MakananModel>> data = new MutableLiveData<>();
+    public MutableLiveData<List<MenuModel>> getMakananList() {
+        List<MenuModel> list = new ArrayList<>();
+        MutableLiveData<List<MenuModel>> data = new MutableLiveData<>();
         try {
             data.setValue(connectMysql.getMakanan());
         } catch (SQLException throwables) {
@@ -43,9 +44,9 @@ public class MenuRepository {
         }
         return data;
     }
-    public MutableLiveData<List<MinumanModel>> getMinumanList() {
-        List<MinumanModel> list = new ArrayList<>();
-        MutableLiveData<List<MinumanModel>> data = new MutableLiveData<>();
+    public MutableLiveData<List<MenuModel>> getMinumanList() {
+        List<MenuModel> list = new ArrayList<>();
+        MutableLiveData<List<MenuModel>> data = new MutableLiveData<>();
         try {
             data.setValue(connectMysql.getMinuman());
         } catch (SQLException throwables) {

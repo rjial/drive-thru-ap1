@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.rijalkun.drivethruclient.model.MakananModel;
+import com.rijalkun.drivethruclient.model.MenuModel;
 import com.rijalkun.drivethruclient.model.MinumanModel;
 import com.rijalkun.drivethruclient.viewmodel.MenuViewModel;
 
@@ -72,10 +73,10 @@ public class MinumanFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_minuman, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_Minuman);
         MenuViewModel menuViewModel = new MenuViewModel(getActivity().getApplication());
-        menuViewModel.getMinumanList().observe(getViewLifecycleOwner(), new Observer<List<MinumanModel>>() {
+        menuViewModel.getMinumanList().observe(getViewLifecycleOwner(), new Observer<List<MenuModel>>() {
             @Override
-            public void onChanged(List<MinumanModel> makananModels) {
-                List<MinumanModel> list = makananModels;
+            public void onChanged(List<MenuModel> makananModels) {
+                List<MenuModel> list = makananModels;
                 MinumanAdapter menuAdapter = new MinumanAdapter(list);
                 recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 recyclerView.setAdapter(menuAdapter);

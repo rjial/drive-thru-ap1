@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 
 import com.rijalkun.drivethruclient.model.MakananModel;
+import com.rijalkun.drivethruclient.model.MenuModel;
 import com.rijalkun.drivethruclient.viewmodel.MenuViewModel;
 
 import java.util.List;
@@ -77,10 +78,10 @@ public class FragmentMakanan extends Fragment {
         View view = inflater.inflate(R.layout.fragment_makanan, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_Makanan);
         MenuViewModel menuViewModel = new MenuViewModel(getActivity().getApplication());
-        menuViewModel.getMakananList().observe(getViewLifecycleOwner(), new Observer<List<MakananModel>>() {
+        menuViewModel.getMakananList().observe(getViewLifecycleOwner(), new Observer<List<MenuModel>>() {
             @Override
-            public void onChanged(List<MakananModel> makananModels) {
-                List<MakananModel> list = makananModels;
+            public void onChanged(List<MenuModel> makananModels) {
+                List<MenuModel> list = makananModels;
                 MakananAdapter menuAdapter = new MakananAdapter(list);
                 recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
                 recyclerView.setAdapter(menuAdapter);

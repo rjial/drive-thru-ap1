@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="border_menu">#FFE3E3E3</color>
+    <color name="border_menu_clicked">#FF64C043</color>
 </resources>
